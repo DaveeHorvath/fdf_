@@ -6,7 +6,7 @@
 /*   By: dhorvath <dhorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:37:15 by dhorvath          #+#    #+#             */
-/*   Updated: 2024/03/10 17:52:58 by dhorvath         ###   ########.fr       */
+/*   Updated: 2024/03/11 14:02:40 by dhorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 # define WIDTH 1000
 # define HEIGHT 1000
 
+#include <MLX42/MLX42.h>
+#include <stdio.h>
 typedef struct s_color
 {
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-	unsigned char	a;
+	int	r;
+	int	g;
+	int	b;
+	int	a;
 }	t_color;
 
 
@@ -78,6 +80,9 @@ typedef struct s_param
 	t_mouse_event	*mouse;
 }	t_param;
 
-void	render(mlx_image_t *image, t_point3 **map, t_settings *settings, mlx_t *mlx);
-void	ft_hook(mlx_t *mlx, mlx_image_t *image, t_point3 **map, t_settings *settings);
+void		render(mlx_image_t *image, t_point3 **map, t_settings *settings, mlx_t *mlx);
+void		ft_hook(mlx_t *mlx, mlx_image_t *image, t_point3 **map, t_settings *settings);
+t_point3	**parse_map(char *s, t_settings *settings);
+void		get_base_vectors(t_vector2 *u, t_vector2 *v, t_settings *settings);
+int			get_color(t_color color);
 #endif

@@ -6,12 +6,12 @@
 /*   By: dhorvath <dhorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 16:01:59 by dhorvath          #+#    #+#             */
-/*   Updated: 2024/03/10 16:38:22 by dhorvath         ###   ########.fr       */
+/*   Updated: 2024/03/11 12:02:40 by dhorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h";
-#include <math.h>;
+#include "fdf.h"
+#include <math.h>
 
 static double	get_radians(double angle)
 {
