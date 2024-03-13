@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// color validation
 int is_color(char *s)
 {
 	const char	*hex = "0123456789ABCDEF";
@@ -28,6 +29,13 @@ int is_color(char *s)
 	return (1);
 }
 
+// color string into color struct
+/*
+	allows for:
+		0x000->0xfff
+		0x000000->0xffffff
+	to add is the alpha value
+*/
 t_color	parse_color(char *s)
 {
 	const char	*hex = "0123456789ABCDEF";
@@ -37,6 +45,7 @@ t_color	parse_color(char *s)
 		return ((t_color){.r=255, .g=255, .b=255, .a=255});
 	if (ft_strlen(s) == 5)
 	{
+		// checks how manyeth letter it is
 		res.r = 17 * (ft_strchr(hex, s[2]) - hex);
 		res.g = 17 * (ft_strchr(hex, s[3]) - hex);
 		res.b = 17 * (ft_strchr(hex, s[4]) - hex);
@@ -44,6 +53,7 @@ t_color	parse_color(char *s)
 	}
 	else
 	{
+		// checks how manyeth letter it is and pushes the second one 16 forward
 		res.r = 16 * (ft_strchr(hex, s[2]) - hex) + (ft_strchr(hex, s[3]) - hex);
 		res.g = 16 * (ft_strchr(hex, s[4]) - hex) + (ft_strchr(hex, s[5]) - hex);
 		res.b = 16 * (ft_strchr(hex, s[6]) - hex) + (ft_strchr(hex, s[7]) - hex);
@@ -52,6 +62,10 @@ t_color	parse_color(char *s)
 	return (res);
 
 }
+
+/*
+	reads file not relevant for presentation
+*/
 
 t_point3 **parse_map(char *s, t_settings *settings)
 {
@@ -100,6 +114,7 @@ t_point3 **parse_map(char *s, t_settings *settings)
 		free(split);
 		x++;
 	}
+	// sets remaining settings
 	settings->map_height = count;
 	settings->map_width = width;
 	settings->index_offset_x = count / 2;
