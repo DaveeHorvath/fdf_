@@ -4,8 +4,7 @@ First Graphics Project at HIVE HELSINKI, an introduction to graphics programming
 
 ## Description
 
-This is a school project that made me learn the most this far, it is a passion project of some sorts. It combines the beauty of math and the simplicity of a wireframe. 
-The project uses the MLX42 library, which is an OpenGL based library used for developing simple grapics projects. 
+This is a school project that made me learn the most this far. This is an ismetric renderer, which creates a wireframe representation of the given heightvalues in a file. It combines the beauty of math and the simplicity of a wireframe. The project uses the MLX42 library, which is an OpenGL based library used for developing simple grapics projects. 
 
 ## Getting Started
 
@@ -34,9 +33,6 @@ make build=FULL && ./fdf maps/42.fdf
 
 Virtual machines without GPU passthroug don't really like this project.
 The docker compatible version is in the making.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
