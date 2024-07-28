@@ -42,7 +42,10 @@ int	main(int argc, char **argv)
 	t_settings	settings;
 
 	if (argc != 2)
+	{
+		printf("FDF made by dhorvath\n\tUsage: ./fdf <fdf file to show>\n");
 		return (0);
+	}
 	// window creation
 	mlx = mlx_init(WIDTH, HEIGHT, "fdf", false);
 	if (!mlx)

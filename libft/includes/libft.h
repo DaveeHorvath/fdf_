@@ -12,7 +12,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# include <stdint.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include "ft_printf.h"

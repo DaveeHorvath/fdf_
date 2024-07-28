@@ -26,7 +26,7 @@ OBJDIR_GNL = obj/gnl/
 OBJDIR_LIBFT = obj/libft/
 OBJDIR_PRF = obj/ft_printf/
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = #-Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -54,7 +54,7 @@ $(OBJDIR_LIBFT)%.o: src/libft/*/%.c
 	$(CC) $(FLAGS) -c -o $@ $< -I includes/
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf obj/
 
 fclean: clean
 	rm -rf $(NAME)
