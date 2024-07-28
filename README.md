@@ -16,17 +16,23 @@ This is a school project that made me learn the most this far. This is an ismetr
 ### Installing
 
 * just clone the repo
-* run the provided setup.sh script
+* if make doesnt work: check https://github.com/codam-coding-college/MLX42 for installation
 ```
-bash setup.sh
+git clone https://github.com/codam-coding-college/MLX42.git
+#linux
+sudo apt update
+sudo apt install build-essential libx11-dev libglfw3-dev libglfw3 xorg-dev
+#mac
+brew install glfw
+brew install cmake
 ```
 
 ### Executing program
 
-* just clone the repo and run make build=FULL
+* just clone the repo and run make
 * just run the created executable with one of the maps in the maps/ folder
 ```
-make build=FULL && ./fdf maps/42.fdf
+make && ./fdf maps/42.fdf
 ```
 
 ## Help
