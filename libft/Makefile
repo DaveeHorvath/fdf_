@@ -54,7 +54,7 @@ $(OBJDIR_LIBFT)%.o: src/libft/*/%.c
 	$(CC) $(FLAGS) -c -o $@ $< -I includes/
 
 clean:
-	rm -rf obj/
+	rm -rf $(OBJ)
 
 fclean: clean
 	rm -rf $(NAME)

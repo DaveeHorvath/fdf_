@@ -40,6 +40,7 @@ $(MLX42_AR):
 	cmake MLX42/ -B MLX42/build && make -C MLX42/build -j4
 
 $(LIBFT):
+	mkdir -p libft/obj/
 	make -C libft/
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
